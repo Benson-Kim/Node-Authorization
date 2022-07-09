@@ -4,7 +4,8 @@ const express = require("express");
 const app = express();
 
 app.use(express.json());
-app.use("/api/auth", require("./routes/auth"));
+app.use("/api/auth", require("./routes/authRote"));
+app.use("/api/private", require("./routes/privateRoute"));
 
 // Error handler sjould be the last middleware
 const errorHandler = require("./middleware/errorHandler");
